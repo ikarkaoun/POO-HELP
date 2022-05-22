@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="Entrer la clé de récupérarion" />
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="400.0">
+         <children>
+            <TextField fx:id="tfKey">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <Label fx:id="errorMsg" prefHeight="16.0" prefWidth="531.0" textFill="#e80c0c">
+         <VBox.margin>
+            <Insets bottom="5.0" left="20.0" right="20.0" />
+         </VBox.margin>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#verifyKey" text="Vérifier" />
+      <VBox fx:id="container" alignment="CENTER" visible="false">
+         <children>
+            <HBox alignment="CENTER" prefHeight="97.0" prefWidth="400.0">
+               <children>
+                  <Label text="Nouveau mot de passe:    " />
+                  <PasswordField fx:id="tfPassword" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#changePassword" text="Changer votre mot de passe" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
